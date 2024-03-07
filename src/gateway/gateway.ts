@@ -8,7 +8,7 @@ export class SocketClient implements OnModuleInit {
     public socketClient: Socket;
 
     constructor() {
-        this.socketClient = io("http://localhost:3000");
+        this.socketClient = io("https://thread-blond.vercel.app/");
     }
 
     onModuleInit() {
@@ -35,7 +35,7 @@ export class SocketClient implements OnModuleInit {
 @Injectable()
 @WebSocketGateway({
     cors: {
-        origin: ['http://localhost:3000']
+        origin: ['https://thread-blond.vercel.app/']
     }
 })
 export class MyGateway implements OnModuleInit {
